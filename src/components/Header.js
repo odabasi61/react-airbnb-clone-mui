@@ -7,6 +7,8 @@ import {
   dFlex,
   displayOnDesktop,
 } from "../themes/commonStyles";
+import ProfileSettings from "./ProfileSettings";
+import MobileSearch from "./MobileSearch";
 // import ProfileSettings from "./ProfileSettings";
 // import MobileSearch from "./MobileSearch";
 
@@ -23,12 +25,22 @@ const Header = () => {
         <Box
           sx={{
             ...flexBetweenCenter,
-            minHeight: 70,
-            px: 4,
+            minHeight: 90,
+            px: { xs: 4, md: 1, lg: 4 },
           }}
         >
-          <Logo />
-          <LocationSearch />
+          <Box sx={displayOnDesktop}>
+            <Logo />
+          </Box>
+          <Box sx={displayOnDesktop}>
+            <LocationSearch />
+          </Box>
+          <Box sx={displayOnDesktop}>
+            <ProfileSettings />
+          </Box>
+          <Box sx={{ display: { xs: "flex", md: "none" } }}>
+            <MobileSearch />
+          </Box>
         </Box>
       </Container>
     </Box>

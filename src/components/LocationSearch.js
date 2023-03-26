@@ -11,8 +11,8 @@ import { pink } from "@mui/material/colors";
 
 const choices = [
   { id: 1, text: "Anywhere" },
-  { id: 1, text: "Any Week" },
-  { id: 1, text: "Any Guest", withIcon: true },
+  { id: 2, text: "Any Week" },
+  { id: 3, text: "Any Guest", withIcon: true },
 ];
 
 const LocationSearch = () => {
@@ -20,9 +20,9 @@ const LocationSearch = () => {
     <Paper
       sx={{
         borderRadius: 20,
-        ml: 15,
+        mx: 2,
       }}
-      elevation={3}
+      elevation={5}
     >
       <Stack
         sx={{
