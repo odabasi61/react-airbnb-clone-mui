@@ -6,6 +6,7 @@ import Header from "./components/Header";
 import OptionsTab from "./components/OptionsTab";
 import LocationCards from "./components/LocationCards";
 import Container from "@mui/material/Container";
+import Footer from "./components/Footer";
 // import Footer from "components/Footer";
 // import FooterMenu from "components/FooterMenu";
 // import { displayOnDesktop } from "themes/commonStyles";
@@ -38,6 +39,9 @@ function App() {
           <Container maxWidth="xl" sx={{ mb: 3 }}>
             <LocationCards />
           </Container>
+        </Box>
+        <Box>
+          <Footer />
         </Box>
       </Box>
     </React.Fragment>
