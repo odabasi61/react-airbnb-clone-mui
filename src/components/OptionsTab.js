@@ -40,6 +40,20 @@ const OptionsTab = () => {
             return <Tab key={tab.id} icon={tab.icon} label={tab.label} />;
           })}
         </Tabs>
+        <Button
+          sx={{
+            display: { xs: "none", md: "block" },
+            border: "1px solid #ddd",
+            minWidth: 90,
+            justifyContent: "space-between",
+            borderRadius: 2,
+            textTransform: "capitalize",
+            py: 1,
+            color: "theme.palette.text.primary",
+          }}
+        >
+          <FaFilter /> Filters
+        </Button>
       </Box>
     </Container>
   );
