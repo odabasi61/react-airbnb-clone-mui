@@ -25,6 +25,7 @@ const Footer = () => {
     <Box
       sx={{
         ...fullWidthFlex,
+        py: "1rem",
         borderTop: "1px solid #ddd",
       }}
     >
@@ -32,10 +33,14 @@ const Footer = () => {
         <Box
           sx={{
             ...flexBetweenCenter,
+            gap: { sm: "1rem" },
+            flexDirection: { xs: "column", lg: "row" },
             width: "100%",
           }}
         >
-          <Stack>
+          <Stack
+            sx={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}
+          >
             <Paper>
               <Link href="#">
                 {new Date().getFullYear()} Airbnb Copyright &copy;
@@ -56,9 +61,9 @@ const Footer = () => {
                 <Box sx={{ ...justifyCenter, mr: 1 }}>
                   <BsGlobe size={24} />
                 </Box>
-                English (CA)
+                English
               </Button>
-              <Button> $CAD </Button>
+              <Button> $USD </Button>
               <Button>
                 Support & Resources
                 <Box sx={{ ...justifyCenter, ml: 1 }}>

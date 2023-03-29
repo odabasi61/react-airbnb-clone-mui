@@ -21,6 +21,7 @@ const LocationSearch = () => {
       sx={{
         borderRadius: 20,
         mx: 2,
+        ml: { lg: 15 },
       }}
       elevation={5}
     >
