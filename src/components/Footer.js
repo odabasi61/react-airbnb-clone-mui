@@ -43,7 +43,7 @@ const Footer = () => {
           >
             <Paper>
               <Link href="#">
-                {new Date().getFullYear()} Airbnb Copyright &copy;
+              Copyright &copy; Airbnb - {new Date().getFullYear()}
               </Link>
             </Paper>
             {footerLinks.map((link) => {

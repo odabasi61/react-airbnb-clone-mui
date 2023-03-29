@@ -7,10 +7,9 @@ import OptionsTab from "./components/OptionsTab";
 import LocationCards from "./components/LocationCards";
 import Container from "@mui/material/Container";
 import Footer from "./components/Footer";
-// import Footer from "components/Footer";
-// import FooterMenu from "components/FooterMenu";
-// import { displayOnDesktop } from "themes/commonStyles";
-// import MobileFooter from "components/MobileFooter";
+import FooterMenu from "./components/FooterMenu";
+import MobileFooter from "./components/MobileFooter";
+import { displayOnDesktop } from "./themes/commonStyles";
 
 function App() {
   return (
@@ -38,9 +37,21 @@ function App() {
         >
           <Container maxWidth="xl" sx={{ mb: 3 }}>
             <LocationCards />
+            <Box sx={{
+                display: { xs: 'flex', md: 'none' },
+              }}>
+              <MobileFooter />
+            </Box>
           </Container>
         </Box>
-        <Box>
+        <Box sx={{
+          display: {xs: 'flex', md: 'none'}
+        }}>
+          <FooterMenu />
+        </Box>
+        <Box sx={
+          displayOnDesktop
+        }>
           <Footer />
         </Box>
       </Box>
